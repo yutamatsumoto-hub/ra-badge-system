@@ -129,7 +129,7 @@ body{font-family:'Noto Sans JP',sans-serif;background:#f7f7f5;color:#1a1a1a;min-
   </div>
 </div>
 <script>
-const GAS_URL='https://script.google.com/macros/s/AKfycbxW5Cb1XcszZ4IrE9_LPVRv0dhtUu2s6GEAOt4EfqpkqE9vnS7UO3z5CUEVSDQSSkLKkQ/exec';
+const GAS_URL='https://script.google.com/macros/s/AKfycbwFODVV6Yg6lrV2cS6cLy0q97cWhmPPv8J19idJHOrrygcxYZBFCXgp6_B5HRzblALU/exec';
 const TRIES=3;
 const BADGES=[
   {icon:"🖥️",name:"準備・UIバッジ",color:"#E6F1FB",numBg:"#185FA5",skill:"事前準備・画面の基本操作",
@@ -179,7 +179,7 @@ async function save(){
   }catch(e){setStatus('保存できませんでした','error');}
   saving=false;
 }
-function getUser(id){return users.find(u=>u.id===id);}
+function getUser(id){return users.find(u=>String(u.id)===String(id));}
 function getUserState(uid,bi){const u=getUser(uid);if(!u.state)u.state={};if(!u.state[bi])u.state[bi]={w:[],p:[],s:0};return u.state[bi];}
 function isClear(uid,bi){const s=getUserState(uid,bi);return s.w.length===BADGES[bi].watch.length&&s.p.length===BADGES[bi].practice.length&&s.s>=TRIES;}
 function clearCount(uid){return BADGES.filter((_,i)=>isClear(uid,i)).length;}
@@ -193,7 +193,7 @@ function renderUsers(){
   list.innerHTML=users.map(u=>{
     const count=clearCount(u.id);
     const dots=BADGES.map((b,i)=>`<div class="user-dot ${isClear(u.id,i)?'done':''}" style="${isClear(u.id,i)?'--dot-color:'+b.numBg:''}"></div>`).join('');
-    return `<div class="user-card" onclick="openUser('${u.id}')"><div class="user-avatar">${u.name.slice(0,2)}</div><div style="flex:1"><div class="user-name">${u.name}</div><div class="user-progress">${count} / 7 バッジ取得</div><div class="user-dots">${dots}</div></div><div style="color:#ccc;font-size:16px">›</div></div>`;
+    return `<div class="user-card" onclick="openUser('${String(u.id)}')"><div class="user-avatar">${u.name.slice(0,2)}</div><div style="flex:1"><div class="user-name">${u.name}</div><div class="user-progress">${count} / 7 バッジ取得</div><div class="user-dots">${dots}</div></div><div style="color:#ccc;font-size:16px">›</div></div>`;
   }).join('');
 }
 function openUser(id){curUserId=id;document.getElementById('current-user-name').textContent=getUser(id).name+' さん';document.getElementById('screen-users').classList.remove('active');document.getElementById('screen-badges').classList.add('active');renderBadges();}
