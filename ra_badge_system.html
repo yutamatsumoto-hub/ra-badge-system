@@ -10,50 +10,33 @@
 body{font-family:'Noto Sans JP',sans-serif;background:#f7f7f5;color:#1a1a1a;min-height:100vh;padding:20px}
 .screen{display:none}.screen.active{display:block}
 .container{max-width:480px;margin:0 auto}
-
-/* ヘッダー */
 .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #e8e8e4}
-.logo{font-size:16px;font-weight:700;color:#1a1a1a;letter-spacing:0.02em}
-.logo span{color:#1D9E75}
-
-/* ボタン */
+.logo{font-size:16px;font-weight:700;color:#1a1a1a}.logo span{color:#1D9E75}
 .btn{font-size:12px;padding:7px 16px;border-radius:8px;border:1px solid #d0d0cc;background:none;color:#666;cursor:pointer;font-family:'Noto Sans JP',sans-serif;transition:all 0.15s}
 .btn:hover{background:#f0f0ec;border-color:#aaa}
 .btn-primary{background:#1D9E75;border-color:#1D9E75;color:#fff;font-weight:500}
 .btn-primary:hover{background:#0F6E56;border-color:#0F6E56}
-.btn-danger{border-color:#E24B4A;color:#E24B4A}
-.btn-danger:hover{background:#fff0f0}
-
-/* 利用者追加フォーム */
+.btn-danger{border-color:#E24B4A;color:#E24B4A}.btn-danger:hover{background:#fff0f0}
 .add-form{background:#fff;border:1px solid #e8e8e4;border-radius:12px;padding:16px;margin-bottom:16px}
-.add-form input{width:100%;font-size:14px;padding:9px 12px;border-radius:8px;border:1px solid #d0d0cc;font-family:'Noto Sans JP',sans-serif;color:#1a1a1a;outline:none;transition:border-color 0.15s;margin-bottom:10px}
+.add-form input{width:100%;font-size:14px;padding:9px 12px;border-radius:8px;border:1px solid #d0d0cc;font-family:'Noto Sans JP',sans-serif;color:#1a1a1a;outline:none;margin-bottom:10px}
 .add-form input:focus{border-color:#1D9E75}
 .add-form-btns{display:flex;gap:8px}
-
-/* 利用者カード */
 .user-card{background:#fff;border:1px solid #e8e8e4;border-radius:12px;padding:14px 16px;margin-bottom:8px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all 0.15s}
 .user-card:hover{border-color:#1D9E75;transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 .user-avatar{width:42px;height:42px;border-radius:50%;background:#E1F5EE;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#085041;flex-shrink:0}
-.user-info{flex:1}
 .user-name{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:2px}
 .user-progress{font-size:11px;color:#888;margin-bottom:6px}
 .user-dots{display:flex;gap:4px}
-.user-dot{width:11px;height:11px;border-radius:50%;background:#e0e0dc;transition:background 0.2s}
+.user-dot{width:11px;height:11px;border-radius:50%;background:#e0e0dc}
 .user-dot.done{background:var(--dot-color)}
-.user-arrow{color:#ccc;font-size:16px}
 .empty-state{text-align:center;padding:48px 20px;color:#aaa;font-size:13px;line-height:1.8}
-
-/* バッジ画面 */
+.sync-status{font-size:11px;text-align:center;padding:8px;color:#888}
+.sync-status.ok{color:#1D9E75}.sync-status.error{color:#E24B4A}
 .back-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
 .user-title{font-size:15px;font-weight:700;color:#1a1a1a}
-
-/* プログレスバー */
-.prog-section{margin-bottom:20px}
 .prog-bar-bg{background:#e8e8e4;border-radius:99px;height:6px;overflow:hidden;margin-bottom:6px}
 .prog-bar-fill{height:6px;border-radius:99px;background:#1D9E75;transition:width 0.4s ease}
-.prog-text{font-size:11px;color:#888;text-align:right}
-
-/* バッジグリッド */
+.prog-text{font-size:11px;color:#888;text-align:right;margin-bottom:16px}
 .badge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
 .badge-card{background:#fff;border:1px solid #e8e8e4;border-radius:12px;padding:12px 6px 10px;text-align:center;cursor:pointer;transition:all 0.15s}
 .badge-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.08)}
@@ -64,29 +47,15 @@ body{font-family:'Noto Sans JP',sans-serif;background:#f7f7f5;color:#1a1a1a;min-
 .badge-card.unlocked .badge-num{background:var(--num-color)}
 .badge-label{font-size:10px;font-weight:500;color:#555;margin-bottom:2px;line-height:1.3}
 .badge-sublabel{font-size:9px;color:#aaa;line-height:1.3}
-
-/* チャンピオンカード */
 .champ-card{background:#fff;border:1px solid #e8e8e4;border-radius:12px;padding:20px;text-align:center;opacity:0.4;transition:all 0.4s}
 .champ-card.ready{opacity:1;border-color:#EF9F27;background:linear-gradient(135deg,#FFFBF0,#FFF5DC)}
-.champ-icon{font-size:36px;margin-bottom:8px}
-.champ-title{font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:4px}
-.champ-sub{font-size:11px;color:#888}
-
-/* モーダル */
-.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:100;align-items:center;justify-content:center;padding:20px}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;align-items:center;justify-content:center;padding:20px}
 .modal-bg.open{display:flex}
 .modal{background:#fff;border-radius:16px;padding:22px;max-width:360px;width:100%;max-height:88vh;overflow-y:auto}
-.modal-top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.modal-icon{font-size:32px}
-.modal-title{font-size:15px;font-weight:700;color:#1a1a1a}
-.modal-skill{font-size:11px;color:#888;margin-top:2px}
-
-/* ステップブロック */
 .step-block{border-radius:10px;padding:12px 14px;margin-bottom:8px}
 .step-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
 .step-num{width:20px;height:20px;border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
-.step-title{font-size:12px;font-weight:500}
-.check-row{display:flex;align-items:flex-start;gap:9px;padding:5px 0;cursor:pointer;border-radius:6px;transition:background 0.1s}
+.check-row{display:flex;align-items:flex-start;gap:9px;padding:5px 0;cursor:pointer;border-radius:6px}
 .check-row:hover{background:rgba(0,0,0,0.03)}
 .check-box{width:16px;height:16px;border-radius:4px;border:1.5px solid #ccc;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;transition:all 0.15s}
 .check-row.done .check-box{background:#1D9E75;border-color:#1D9E75}
@@ -94,35 +63,22 @@ body{font-family:'Noto Sans JP',sans-serif;background:#f7f7f5;color:#1a1a1a;min-
 .check-text{font-size:12px;color:#333;line-height:1.5}
 .stable-item{font-size:12px;color:#7a4f00;line-height:1.6;padding:2px 0;display:flex;gap:6px}
 .stable-item::before{content:"•";flex-shrink:0}
-
-/* 安定確認 */
 .try-row{display:flex;align-items:center;gap:8px;margin-top:10px}
 .try-label{font-size:11px;color:#888;flex:1}
 .try-dots{display:flex;gap:6px}
 .try-dot{width:26px;height:26px;border-radius:50%;border:1.5px solid #ccc;background:none;cursor:pointer;font-size:10px;color:#aaa;display:flex;align-items:center;justify-content:center;transition:all 0.15s;font-family:'Noto Sans JP',sans-serif}
 .try-dot.done{background:#1D9E75;border-color:#1D9E75;color:#fff;font-weight:700}
-
-/* バッジ取得バナー */
 .clear-banner{display:none;margin-top:12px;padding:12px;background:#E1F5EE;border:1px solid #1D9E75;border-radius:10px;text-align:center}
 .clear-banner.show{display:block}
-.clear-title{font-size:13px;font-weight:700;color:#085041}
-.clear-sub{font-size:11px;color:#0F6E56;margin-top:2px}
-
-.modal-close{font-size:13px;color:#888;cursor:pointer;border:1px solid #e0e0dc;border-radius:8px;padding:8px;background:none;margin-top:10px;width:100%;font-family:'Noto Sans JP',sans-serif;transition:all 0.15s}
-.modal-close:hover{background:#f7f7f5}
-
-/* 削除確認 */
+.modal-close{font-size:13px;color:#888;cursor:pointer;border:1px solid #e0e0dc;border-radius:8px;padding:8px;background:none;margin-top:10px;width:100%;font-family:'Noto Sans JP',sans-serif}
 .confirm-modal{background:#fff;border-radius:16px;padding:24px;max-width:280px;width:90%;text-align:center}
-.confirm-icon{font-size:32px;margin-bottom:10px}
-.confirm-title{font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:6px}
-.confirm-sub{font-size:12px;color:#888;margin-bottom:18px;line-height:1.6}
-.confirm-btns{display:flex;gap:8px}
+.loading-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.3);z-index:200;display:flex;align-items:center;justify-content:center}
+.loading-box{background:#fff;border-radius:12px;padding:20px 28px;text-align:center;font-size:13px;color:#666}
 </style>
 </head>
 <body>
+<div class="loading-overlay" id="loading-overlay"><div class="loading-box">データを読み込み中...</div></div>
 <div class="container">
-
-<!-- 利用者一覧画面 -->
 <div class="screen active" id="screen-users">
   <div class="header">
     <div class="logo">RA<span>バッジ</span>システム</div>
@@ -130,60 +86,52 @@ body{font-family:'Noto Sans JP',sans-serif;background:#f7f7f5;color:#1a1a1a;min-
   </div>
   <div id="add-form-wrap"></div>
   <div id="user-list"></div>
+  <div class="sync-status" id="sync-status"></div>
 </div>
-
-<!-- バッジ画面 -->
 <div class="screen" id="screen-badges">
   <div class="back-header">
     <button class="btn" onclick="goBack()">← 一覧へ</button>
     <span class="user-title" id="current-user-name"></span>
     <button class="btn btn-danger" onclick="confirmDelete()" style="font-size:11px;padding:5px 10px">削除</button>
   </div>
-  <div class="prog-section">
-    <div class="prog-bar-bg"><div class="prog-bar-fill" id="prog-fill" style="width:0%"></div></div>
-    <div class="prog-text" id="prog-label">0 / 7 バッジ取得</div>
-  </div>
+  <div class="prog-bar-bg"><div class="prog-bar-fill" id="prog-fill" style="width:0%"></div></div>
+  <div class="prog-text" id="prog-label">0 / 7 バッジ取得</div>
   <div class="badge-grid" id="badge-grid"></div>
   <div class="champ-card" id="champ-card">
-    <div class="champ-icon">🏆</div>
-    <div class="champ-title">チャンピオン認定！</div>
-    <div class="champ-sub">プレミアプロ基本編集マスター</div>
+    <div style="font-size:36px;margin-bottom:8px">🏆</div>
+    <div style="font-size:14px;font-weight:700">チャンピオン認定！</div>
+    <div style="font-size:11px;color:#888;margin-top:4px">プレミアプロ基本編集マスター</div>
   </div>
 </div>
-
-</div><!-- /container -->
-
-<!-- バッジ詳細モーダル -->
+</div>
 <div class="modal-bg" id="modal" onclick="closeModal(event)">
   <div class="modal">
-    <div class="modal-top">
-      <div class="modal-icon" id="m-icon"></div>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+      <div style="font-size:32px" id="m-icon"></div>
       <div>
-        <div class="modal-title" id="m-name"></div>
-        <div class="modal-skill" id="m-skill"></div>
+        <div style="font-size:15px;font-weight:700" id="m-name"></div>
+        <div style="font-size:11px;color:#888;margin-top:2px" id="m-skill"></div>
       </div>
     </div>
     <div id="m-body"></div>
     <button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">閉じる</button>
   </div>
 </div>
-
-<!-- 削除確認モーダル -->
 <div class="modal-bg" id="delete-modal">
   <div class="confirm-modal">
-    <div class="confirm-icon">🗑️</div>
-    <div class="confirm-title" id="delete-name"></div>
-    <div class="confirm-sub">このデータを削除しますか？<br>元に戻すことはできません。</div>
-    <div class="confirm-btns">
+    <div style="font-size:32px;margin-bottom:10px">🗑️</div>
+    <div style="font-size:14px;font-weight:700;margin-bottom:6px" id="delete-name"></div>
+    <div style="font-size:12px;color:#888;margin-bottom:18px;line-height:1.6">このデータを削除しますか？<br>元に戻すことはできません。</div>
+    <div style="display:flex;gap:8px">
       <button class="btn btn-danger" style="flex:1" onclick="deleteUser()">削除する</button>
       <button class="btn" style="flex:1" onclick="document.getElementById('delete-modal').classList.remove('open')">キャンセル</button>
     </div>
   </div>
 </div>
-
 <script>
-const TRIES = 3;
-const BADGES = [
+const GAS_URL='https://script.google.com/macros/s/AKfycbwFODVV6Yg6lrV2cS6cLy0q97cWhmPPv8J19idJHOrrygcxYZBFCXgp6_B5HRzblALU/exec';
+const TRIES=3;
+const BADGES=[
   {icon:"🖥️",name:"準備・UIバッジ",color:"#E6F1FB",numBg:"#185FA5",skill:"事前準備・画面の基本操作",
    watch:["プロジェクト作成・キャッシュ設定の手順","プログラムモニターの操作方法","タイムライン・ツールバー・プロジェクトパネルの使い方"],
    practice:["指定フォルダ構成で新規プロジェクトを作成し素材を読み込む","プログラムモニターで再生・停止・フレーム移動を操作する","クリップをタイムラインで移動・トリムしてみる","ショートカット（V・T・スペースキー）を使って操作する"],
@@ -213,196 +161,77 @@ const BADGES = [
    practice:["プロジェクトマネージャーで納品用プロジェクトデータを生成する","完成MP4と生成したデータを指定サーバーの正しいフォルダに格納する","命名ルール（案件名_日付_名前）を確認して格納する"],
    stable:["手順を見ずに納品用データを生成してサーバーに格納できる","命名ルールを正しく適用できる","納品後に格納先を自分で確認できる"]}
 ];
-
-let users = [];
-let curUserId = null;
-let showAddForm = false;
-
-try { users = JSON.parse(localStorage.getItem('ra_badge_v1') || '[]'); } catch(e) {}
-
-function save() { try { localStorage.setItem('ra_badge_v1', JSON.stringify(users)); } catch(e) {} }
-function getUser(id) { return users.find(u => u.id === id); }
-function getUserState(uid, bi) {
-  const u = getUser(uid);
-  if (!u.state) u.state = {};
-  if (!u.state[bi]) u.state[bi] = {w:[], p:[], s:0};
-  return u.state[bi];
+let users=[],curUserId=null,showAddForm=false,saving=false;
+function setStatus(msg,type=''){const el=document.getElementById('sync-status');el.textContent=msg;el.className='sync-status'+(type?' '+type:'');}
+async function loadFromSheets(){
+  try{const res=await fetch(GAS_URL+'?action=load');const data=await res.json();
+    if(data.ok){users=data.users||[];setStatus('最終同期：'+new Date().toLocaleTimeString('ja-JP'),'ok');}
+    else setStatus('読み込みエラー','error');
+  }catch(e){setStatus('接続できませんでした','error');}
+  document.getElementById('loading-overlay').style.display='none';renderUsers();
 }
-function isClear(uid, bi) {
-  const s = getUserState(uid, bi);
-  return s.w.length === BADGES[bi].watch.length && s.p.length === BADGES[bi].practice.length && s.s >= TRIES;
+async function save(){
+  if(saving)return;saving=true;setStatus('保存中...','');
+  try{const res=await fetch(GAS_URL,{method:'POST',body:JSON.stringify({action:'save',users})});
+    const data=await res.json();
+    if(data.ok)setStatus('保存完了：'+new Date().toLocaleTimeString('ja-JP'),'ok');
+    else setStatus('保存エラー','error');
+  }catch(e){setStatus('保存できませんでした','error');}
+  saving=false;
 }
-function clearCount(uid) { return BADGES.filter((_,i) => isClear(uid,i)).length; }
-
-function toggleAddForm() {
-  showAddForm = !showAddForm;
-  renderUsers();
-  if (showAddForm) setTimeout(() => document.getElementById('new-name').focus(), 50);
-}
-
-function addUser() {
-  const name = document.getElementById('new-name').value.trim();
-  if (!name) return;
-  users.push({id: Date.now().toString(), name, state: {}});
-  showAddForm = false;
-  save(); renderUsers();
-}
-
-function renderUsers() {
-  const formWrap = document.getElementById('add-form-wrap');
-  formWrap.innerHTML = showAddForm ? `
-    <div class="add-form">
-      <input type="text" id="new-name" placeholder="利用者名を入力..." maxlength="20" onkeydown="if(event.key==='Enter')addUser()"/>
-      <div class="add-form-btns">
-        <button class="btn btn-primary" style="flex:1" onclick="addUser()">追加する</button>
-        <button class="btn" onclick="toggleAddForm()">キャンセル</button>
-      </div>
-    </div>` : '';
-
-  const list = document.getElementById('user-list');
-  if (users.length === 0) {
-    list.innerHTML = '<div class="empty-state">まだ利用者が登録されていません<br>「+ 利用者を追加」から登録してください</div>';
-    return;
-  }
-  list.innerHTML = users.map(u => {
-    const count = clearCount(u.id);
-    const dots = BADGES.map((b,i) => {
-      const done = isClear(u.id, i);
-      return `<div class="user-dot ${done?'done':''}" style="${done?'--dot-color:'+b.numBg:''}"></div>`;
-    }).join('');
-    return `<div class="user-card" onclick="openUser('${u.id}')">
-      <div class="user-avatar">${u.name.slice(0,2)}</div>
-      <div class="user-info">
-        <div class="user-name">${u.name}</div>
-        <div class="user-progress">${count} / 7 バッジ取得</div>
-        <div class="user-dots">${dots}</div>
-      </div>
-      <div class="user-arrow">›</div>
-    </div>`;
+function getUser(id){return users.find(u=>u.id===id);}
+function getUserState(uid,bi){const u=getUser(uid);if(!u.state)u.state={};if(!u.state[bi])u.state[bi]={w:[],p:[],s:0};return u.state[bi];}
+function isClear(uid,bi){const s=getUserState(uid,bi);return s.w.length===BADGES[bi].watch.length&&s.p.length===BADGES[bi].practice.length&&s.s>=TRIES;}
+function clearCount(uid){return BADGES.filter((_,i)=>isClear(uid,i)).length;}
+function toggleAddForm(){showAddForm=!showAddForm;renderUsers();if(showAddForm)setTimeout(()=>document.getElementById('new-name').focus(),50);}
+async function addUser(){const name=document.getElementById('new-name').value.trim();if(!name)return;users.push({id:Date.now().toString(),name,state:{}});showAddForm=false;renderUsers();await save();}
+function renderUsers(){
+  const fw=document.getElementById('add-form-wrap');
+  fw.innerHTML=showAddForm?`<div class="add-form"><input type="text" id="new-name" placeholder="利用者名を入力..." maxlength="20" onkeydown="if(event.key==='Enter')addUser()"/><div class="add-form-btns"><button class="btn btn-primary" style="flex:1" onclick="addUser()">追加する</button><button class="btn" onclick="toggleAddForm()">キャンセル</button></div></div>`:'';
+  const list=document.getElementById('user-list');
+  if(users.length===0){list.innerHTML='<div class="empty-state">まだ利用者が登録されていません<br>「+ 利用者を追加」から登録してください</div>';return;}
+  list.innerHTML=users.map(u=>{
+    const count=clearCount(u.id);
+    const dots=BADGES.map((b,i)=>`<div class="user-dot ${isClear(u.id,i)?'done':''}" style="${isClear(u.id,i)?'--dot-color:'+b.numBg:''}"></div>`).join('');
+    return `<div class="user-card" onclick="openUser('${u.id}')"><div class="user-avatar">${u.name.slice(0,2)}</div><div style="flex:1"><div class="user-name">${u.name}</div><div class="user-progress">${count} / 7 バッジ取得</div><div class="user-dots">${dots}</div></div><div style="color:#ccc;font-size:16px">›</div></div>`;
   }).join('');
 }
-
-function openUser(id) {
-  curUserId = id;
-  document.getElementById('current-user-name').textContent = getUser(id).name + ' さん';
-  document.getElementById('screen-users').classList.remove('active');
-  document.getElementById('screen-badges').classList.add('active');
-  renderBadges();
-}
-
-function goBack() {
-  document.getElementById('screen-badges').classList.remove('active');
-  document.getElementById('screen-users').classList.add('active');
-  renderUsers();
-}
-
-function renderBadges() {
-  const grid = document.getElementById('badge-grid');
-  grid.innerHTML = '';
-  BADGES.forEach((b, i) => {
-    const done = isClear(curUserId, i);
-    const card = document.createElement('div');
-    card.className = 'badge-card' + (done ? ' unlocked' : '');
-    card.innerHTML = `
-      <div class="badge-icon-wrap" style="${done ? 'background:'+b.color : ''}">
-        ${b.icon}
-        <span class="badge-num" style="--num-color:${b.numBg}">${i+1}</span>
-      </div>
-      <div class="badge-label">${b.name}</div>
-      <div class="badge-sublabel">${b.skill}</div>
-    `;
-    card.addEventListener('click', () => openModal(i));
-    grid.appendChild(card);
+function openUser(id){curUserId=id;document.getElementById('current-user-name').textContent=getUser(id).name+' さん';document.getElementById('screen-users').classList.remove('active');document.getElementById('screen-badges').classList.add('active');renderBadges();}
+function goBack(){document.getElementById('screen-badges').classList.remove('active');document.getElementById('screen-users').classList.add('active');renderUsers();}
+function renderBadges(){
+  const grid=document.getElementById('badge-grid');grid.innerHTML='';
+  BADGES.forEach((b,i)=>{
+    const done=isClear(curUserId,i);const card=document.createElement('div');
+    card.className='badge-card'+(done?' unlocked':'');
+    card.innerHTML=`<div class="badge-icon-wrap" style="${done?'background:'+b.color:''}">${b.icon}<span class="badge-num" style="--num-color:${b.numBg}">${i+1}</span></div><div class="badge-label">${b.name}</div><div class="badge-sublabel">${b.skill}</div>`;
+    card.addEventListener('click',()=>openModal(i));grid.appendChild(card);
   });
-  const count = clearCount(curUserId);
-  document.getElementById('prog-fill').style.width = (count/7*100) + '%';
-  document.getElementById('prog-label').textContent = count + ' / 7 バッジ取得';
-  document.getElementById('champ-card').className = 'champ-card' + (count === 7 ? ' ready' : '');
+  const count=clearCount(curUserId);
+  document.getElementById('prog-fill').style.width=(count/7*100)+'%';
+  document.getElementById('prog-label').textContent=count+' / 7 バッジ取得';
+  document.getElementById('champ-card').className='champ-card'+(count===7?' ready':'');
 }
-
-function openModal(bi) {
-  const b = BADGES[bi], s = getUserState(curUserId, bi);
-  document.getElementById('m-icon').textContent = b.icon;
-  document.getElementById('m-name').textContent = `バッジ${bi+1}：${b.name}`;
-  document.getElementById('m-skill').textContent = b.skill;
-
-  const mkChecks = (arr, checked, type) => arr.map((t, ci) => {
-    const done = checked.includes(ci);
-    return `<div class="check-row ${done?'done':''}" onclick="toggleItem(${bi},'${type}',${ci})">
-      <div class="check-box">${done?'✓':''}</div>
-      <div class="check-text">${t}</div>
-    </div>`;
-  }).join('');
-
-  const dots = Array.from({length:TRIES}, (_,ti) =>
-    `<button class="try-dot ${ti<s.s?'done':''}" onclick="toggleTry(${bi},${ti})">${ti<s.s?'✓':ti+1}</button>`
-  ).join('');
-
-  const clear = isClear(curUserId, bi);
-  document.getElementById('m-body').innerHTML = `
-    <div class="step-block" style="background:#E6F1FB">
-      <div class="step-header">
-        <div class="step-num" style="background:#185FA5">1</div>
-        <div class="step-title" style="color:#185FA5">動画を視聴する</div>
-      </div>
-      ${mkChecks(b.watch, s.w, 'w')}
-    </div>
-    <div class="step-block" style="background:#EAF3DE">
-      <div class="step-header">
-        <div class="step-num" style="background:#3B6D11">2</div>
-        <div class="step-title" style="color:#3B6D11">素材で練習する</div>
-      </div>
-      ${mkChecks(b.practice, s.p, 'p')}
-    </div>
-    <div class="step-block" style="background:#FAEEDA">
-      <div class="step-header">
-        <div class="step-num" style="background:#854F0B">3</div>
-        <div class="step-title" style="color:#854F0B">安定確認（${TRIES}回できたら取得！）</div>
-      </div>
-      ${b.stable.map(t => `<div class="stable-item">${t}</div>`).join('')}
-      <div class="try-row">
-        <div class="try-label">見ないでできた回数</div>
-        <div class="try-dots">${dots}</div>
-      </div>
-    </div>
-    <div class="clear-banner ${clear?'show':''}">
-      <div class="clear-title">🎉 バッジ取得おめでとう！</div>
-      <div class="clear-sub">支援員と一緒に記録しよう</div>
-    </div>
-  `;
+function openModal(bi){
+  const b=BADGES[bi],s=getUserState(curUserId,bi);
+  document.getElementById('m-icon').textContent=b.icon;
+  document.getElementById('m-name').textContent=`バッジ${bi+1}：${b.name}`;
+  document.getElementById('m-skill').textContent=b.skill;
+  const mkChecks=(arr,checked,type)=>arr.map((t,ci)=>{const done=checked.includes(ci);return `<div class="check-row ${done?'done':''}" onclick="toggleItem(${bi},'${type}',${ci})"><div class="check-box">${done?'✓':''}</div><div class="check-text">${t}</div></div>`;}).join('');
+  const dots=Array.from({length:TRIES},(_,ti)=>`<button class="try-dot ${ti<s.s?'done':''}" onclick="toggleTry(${bi},${ti})">${ti<s.s?'✓':ti+1}</button>`).join('');
+  const clear=isClear(curUserId,bi);
+  document.getElementById('m-body').innerHTML=`
+    <div class="step-block" style="background:#E6F1FB"><div class="step-header"><div class="step-num" style="background:#185FA5">1</div><div style="font-size:12px;font-weight:500;color:#185FA5">動画を視聴する</div></div>${mkChecks(b.watch,s.w,'w')}</div>
+    <div class="step-block" style="background:#EAF3DE"><div class="step-header"><div class="step-num" style="background:#3B6D11">2</div><div style="font-size:12px;font-weight:500;color:#3B6D11">素材で練習する</div></div>${mkChecks(b.practice,s.p,'p')}</div>
+    <div class="step-block" style="background:#FAEEDA"><div class="step-header"><div class="step-num" style="background:#854F0B">3</div><div style="font-size:12px;font-weight:500;color:#854F0B">安定確認（${TRIES}回できたら取得！）</div></div>${b.stable.map(t=>`<div class="stable-item">${t}</div>`).join('')}<div class="try-row"><div class="try-label">見ないでできた回数</div><div class="try-dots">${dots}</div></div></div>
+    <div class="clear-banner ${clear?'show':''}"><div style="font-size:14px;font-weight:700;color:#085041">🎉 バッジ取得おめでとう！</div><div style="font-size:11px;color:#0F6E56;margin-top:2px">支援員と一緒に記録しよう</div></div>`;
   document.getElementById('modal').classList.add('open');
 }
-
-function toggleItem(bi, type, ci) {
-  const s = getUserState(curUserId, bi);
-  if (s[type].includes(ci)) s[type] = s[type].filter(x => x !== ci);
-  else s[type].push(ci);
-  save(); openModal(bi); renderBadges();
-}
-
-function toggleTry(bi, ti) {
-  const s = getUserState(curUserId, bi);
-  s.s = (s.s === ti+1) ? ti : ti+1;
-  save(); openModal(bi); renderBadges();
-}
-
-function closeModal(e) {
-  if (e.target === document.getElementById('modal')) document.getElementById('modal').classList.remove('open');
-}
-
-function confirmDelete() {
-  document.getElementById('delete-name').textContent = getUser(curUserId).name + ' さんのデータを削除しますか？';
-  document.getElementById('delete-modal').classList.add('open');
-}
-
-function deleteUser() {
-  users = users.filter(u => u.id !== curUserId);
-  save();
-  document.getElementById('delete-modal').classList.remove('open');
-  goBack();
-}
-
-renderUsers();
+async function toggleItem(bi,type,ci){const s=getUserState(curUserId,bi);if(s[type].includes(ci))s[type]=s[type].filter(x=>x!==ci);else s[type].push(ci);openModal(bi);renderBadges();await save();}
+async function toggleTry(bi,ti){const s=getUserState(curUserId,bi);s.s=(s.s===ti+1)?ti:ti+1;openModal(bi);renderBadges();await save();}
+function closeModal(e){if(e.target===document.getElementById('modal'))document.getElementById('modal').classList.remove('open');}
+function confirmDelete(){document.getElementById('delete-name').textContent=getUser(curUserId).name+' さんのデータを削除しますか？';document.getElementById('delete-modal').classList.add('open');}
+async function deleteUser(){users=users.filter(u=>u.id!==curUserId);document.getElementById('delete-modal').classList.remove('open');goBack();await save();}
+loadFromSheets();
 </script>
 </body>
 </html>
